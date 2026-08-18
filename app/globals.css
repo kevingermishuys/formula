@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+:root {
+  /* Charcoal & Dark Slate — structure, text, nav, footer (30%) */
+  --ink: #1a1a1a;
+  --slate: #2d3748;
+  --ink-soft: #64748b;
+
+  /* White & Off-White — canvas, cards (60%) */
+  --canvas: #f8f9fa;
+  --canvas-deep: #eef1f3;
+  --white: #ffffff;
+
+  /* Formula Red — CTAs, active states, badges, hover (10%) */
+  --red: #c8102e;
+  --red-deep: #9e0c22;
+
+  /* Safety Gold — sparing use for status/trust indicators */
+  --gold: #ffc107;
+  --gold-deep: #b28600;
+
+  --grad-ink: linear-gradient(135deg, #1a1a1a 0%, #2d3748 100%);
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-slate: var(--slate);
+  --color-ink-soft: var(--ink-soft);
+  --color-canvas: var(--canvas);
+  --color-canvas-deep: var(--canvas-deep);
+  --color-white: var(--white);
+  --color-red: var(--red);
+  --color-red-deep: var(--red-deep);
+  --color-gold: var(--gold);
+  --color-gold-deep: var(--gold-deep);
+
+  --font-display: var(--font-manrope);
+  --font-sans: var(--font-inter);
+
+  --radius-DEFAULT: 10px;
+  --radius-sm: 6px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-inter), sans-serif;
+}
+
+::selection {
+  background: var(--red);
+  color: var(--white);
+}
+
+.label {
+  font-family: var(--font-inter), sans-serif;
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+}
+
+/* Route lines — faint structural texture for main content sections only.
+   Excluded from sticky nav and footer per brand background rule. */
+.bg-route-lines {
+  background-image: repeating-linear-gradient(
+    120deg,
+    rgba(26, 26, 26, 0.045) 0 2px,
+    transparent 2px 26px
+  );
+}
+
+.text-grad-ink {
+  background-image: var(--grad-ink);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Underline-on-hover for nav-style text links */
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  width: 0;
+  background: var(--red);
+  transition: width 0.25s ease;
+}
+.link-underline:hover::after {
+  width: 100%;
+}
+
+:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 2px;
+}
+
+@keyframes cta-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(200, 16, 46, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(200, 16, 46, 0);
+  }
+}
+
+.animate-cta-pulse {
+  animation: cta-pulse 2.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.15s !important;
+    transition-duration: 0.15s !important;
+    scroll-behavior: auto !important;
+  }
+
+  .animate-cta-pulse {
+    animation: none;
+  }
+}
