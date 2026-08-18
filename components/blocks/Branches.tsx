@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { MapPin, Phone } from "lucide-react";
 import { Reveal } from "@/components/motion/Reveal";
 import { Button } from "@/components/ui/Button";
+import { BranchMap } from "./BranchMap";
 import { branches, site } from "@/content/site";
 
 export function Branches() {
@@ -18,6 +19,10 @@ export function Branches() {
           <p className="mt-3 text-ink-soft">
             From Windhoek to the coast, the north, and the south — find your nearest depot.
           </p>
+        </Reveal>
+
+        <Reveal delay={0.1} className="mt-10">
+          <BranchMap />
         </Reveal>
 
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">

@@ -20,6 +20,8 @@ export const branches = [
     phoneDisplay: "+264 83 720 2580",
     phoneHref: "tel:+264837202580",
     towns: "Gobabis, Okahandja & Rehoboth",
+    lat: -22.5609,
+    lng: 17.0658,
     isHQ: true,
   },
   {
@@ -28,6 +30,8 @@ export const branches = [
     phoneDisplay: "+264 64 402 560",
     phoneHref: "tel:+26464402560",
     towns: "Henties Bay, Arandis",
+    lat: -22.6784,
+    lng: 14.5326,
     isHQ: false,
   },
   {
@@ -36,6 +40,8 @@ export const branches = [
     phoneDisplay: "+264 64 221 203",
     phoneHref: "tel:+26464221203",
     towns: "Coastal region",
+    lat: -22.9575,
+    lng: 14.5053,
     isHQ: false,
   },
   {
@@ -44,6 +50,8 @@ export const branches = [
     phoneDisplay: "+264 61 302 583",
     phoneHref: "tel:+26461302583",
     towns: "Central region",
+    lat: -22.45,
+    lng: 18.9667,
     isHQ: false,
   },
   {
@@ -52,6 +60,8 @@ export const branches = [
     phoneDisplay: "+264 63 225 656",
     phoneHref: "tel:+26463225656",
     towns: "Lüderitz, Oranjemund & Rosh Pinah",
+    lat: -26.5833,
+    lng: 18.1333,
     isHQ: false,
   },
   {
@@ -60,6 +70,8 @@ export const branches = [
     phoneDisplay: "+264 63 241 513",
     phoneHref: "tel:+26463241513",
     towns: "Southern region",
+    lat: -24.6333,
+    lng: 17.9667,
     isHQ: false,
   },
   {
@@ -68,6 +80,8 @@ export const branches = [
     phoneDisplay: "+264 65 238 445",
     phoneHref: "tel:+26465238445",
     towns: "Oshakati, Oshikango, Oshikuku, Ombalantu, Opuwo, Okahao, Tsandi, Ruacana, Etunda & Okongo",
+    lat: -17.7833,
+    lng: 15.7667,
     isHQ: false,
   },
   {
@@ -76,6 +90,8 @@ export const branches = [
     phoneDisplay: "+264 81 416 3441",
     phoneHref: "tel:+264814163441",
     towns: "Eenhana, Omuthiya, Okalongo",
+    lat: -17.9167,
+    lng: 15.95,
     isHQ: false,
   },
   {
@@ -84,6 +100,8 @@ export const branches = [
     phoneDisplay: "+264 67 304 993",
     phoneHref: "tel:+26467304993",
     towns: "Central North region",
+    lat: -20.4667,
+    lng: 16.65,
     isHQ: false,
   },
   {
@@ -92,6 +110,8 @@ export const branches = [
     phoneDisplay: "+264 67 241 019",
     phoneHref: "tel:+26467241019",
     towns: "Northern region",
+    lat: -19.5667,
+    lng: 18.1167,
     isHQ: false,
   },
   {
@@ -100,6 +120,8 @@ export const branches = [
     phoneDisplay: "+264 67 313 443",
     phoneHref: "tel:+26467313443",
     towns: "Outjo district",
+    lat: -20.1167,
+    lng: 16.15,
     isHQ: false,
   },
   {
@@ -108,6 +130,8 @@ export const branches = [
     phoneDisplay: "+264 64 571 063",
     phoneHref: "tel:+26464571063",
     towns: "Erongo inland region",
+    lat: -21.4333,
+    lng: 15.9333,
     isHQ: false,
   },
   {
@@ -116,6 +140,8 @@ export const branches = [
     phoneDisplay: "+264 81 281 2686",
     phoneHref: "tel:+264812812686",
     towns: "Karibib area",
+    lat: -21.9333,
+    lng: 15.85,
     isHQ: false,
   },
   {
@@ -124,6 +150,8 @@ export const branches = [
     phoneDisplay: "+264 67 221 722",
     phoneHref: "tel:+26467221722",
     towns: "Otavi",
+    lat: -19.2333,
+    lng: 17.7167,
     isHQ: false,
   },
   {
@@ -132,6 +160,8 @@ export const branches = [
     phoneDisplay: "+264 66 267 469",
     phoneHref: "tel:+26466267469",
     towns: "Katima Mulilo, Divundu",
+    lat: -17.9333,
+    lng: 19.7667,
     isHQ: false,
   },
 ] as const;
