@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
 import { Logo } from "@/components/brand/Logo";
 import { branches, downloads, navLinks, site } from "@/content/site";
 
@@ -57,18 +57,23 @@ export function Footer() {
           </div>
 
           <div className="md:col-span-3">
-            <p className="label mb-4 text-white/50">Branches</p>
-            <ul className="flex flex-col gap-4 text-sm text-white/70">
-              {branches.map((branch) => (
-                <li key={branch.name} className="flex gap-2">
-                  <MapPin className="mt-0.5 h-4 w-4 shrink-0" strokeWidth={1.75} aria-hidden />
-                  <span>
-                    <span className="block font-medium text-white">{branch.name}</span>
-                    {branch.address}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <p className="label mb-4 text-white/50">Head Office</p>
+            <p className="flex gap-2 text-sm text-white/70">
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0" strokeWidth={1.75} aria-hidden />
+              <span>
+                <span className="block font-medium text-white">
+                  {branches.find((b) => b.isHQ)?.name}
+                </span>
+                {branches.find((b) => b.isHQ)?.address}
+              </span>
+            </p>
+            <a
+              href="#branches"
+              className="mt-4 inline-flex min-h-8 items-center gap-1.5 text-sm font-medium text-white/70 transition-colors hover:text-white"
+            >
+              View all {site.totalBranches} branches
+              <ArrowRight className="h-3.5 w-3.5" strokeWidth={2} aria-hidden />
+            </a>
           </div>
         </div>
 

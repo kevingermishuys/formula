@@ -10,16 +10,16 @@ import { organizationJsonLd } from "@/lib/schema";
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — Overnight Courier Across Namibia & South Africa`,
+    default: `${site.name} — Overnight Courier Across Namibia`,
     template: `%s — ${site.name}`,
   },
   description:
-    "Fast, safe, and reliable overnight courier delivery across Namibia and cross-border into South Africa. Over 19 years of operational excellence.",
+    "Fast, safe, and reliable overnight courier delivery to 15 branches across Namibia. Over 19 years of operational excellence.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: `${site.name} — Overnight Courier Across Namibia & South Africa`,
+    title: `${site.name} — Overnight Courier Across Namibia`,
     description:
-      "Fast, safe, and reliable overnight courier delivery across Namibia and cross-border into South Africa.",
+      "Fast, safe, and reliable overnight courier delivery to 15 branches across Namibia.",
     url: site.url,
     siteName: site.name,
     locale: "en_NA",

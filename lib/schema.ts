@@ -1,6 +1,8 @@
 import { branches, site } from "@/content/site";
 
 export function organizationJsonLd() {
+  const hq = branches.find((branch) => branch.isHQ) ?? branches[0];
+
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -10,11 +12,11 @@ export function organizationJsonLd() {
     url: site.url,
     email: site.email,
     telephone: site.phoneDisplay,
-    areaServed: ["Namibia", "South Africa"],
-    address: branches.map((branch) => ({
+    areaServed: "Namibia",
+    address: {
       "@type": "PostalAddress",
-      streetAddress: branch.address,
+      streetAddress: hq.address,
       addressCountry: "NA",
-    })),
+    },
   };
 }

@@ -36,7 +36,7 @@ export function Hero() {
             19+ Years of Operational Excellence
           </span>
           <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.05] text-white sm:text-5xl">
-            Fast, Reliable &amp; Safe Courier Services Across Namibia &amp; South Africa
+            Fast, Reliable &amp; Safe Courier Services Across Namibia
           </h1>
           <p className="mt-5 text-lg text-white/80">
             Overnight parcel delivery from North to South, East to West.{" "}

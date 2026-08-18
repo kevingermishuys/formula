@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { MapPin, Phone } from "lucide-react";
 import { Reveal } from "@/components/motion/Reveal";
 import { Button } from "@/components/ui/Button";
-import { branches } from "@/content/site";
+import { branches, site } from "@/content/site";
 
 export function Branches() {
   return (
@@ -13,13 +13,16 @@ export function Branches() {
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="label text-red">Branches</p>
           <h2 className="mt-2 font-display text-3xl font-extrabold text-ink sm:text-4xl">
-            Find Your Nearest Branch
+            {site.totalBranches} Branches Across Namibia
           </h2>
+          <p className="mt-3 text-ink-soft">
+            From Windhoek to the coast, the north, and the south — find your nearest depot.
+          </p>
         </Reveal>
 
-        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:max-w-3xl sm:mx-auto">
-          {branches.map((branch) => (
-            <Reveal key={branch.name} className="h-full">
+        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {branches.map((branch, i) => (
+            <Reveal key={branch.name} delay={Math.min(i * 0.04, 0.4)} className="h-full">
               <motion.div
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.25, ease: "easeOut" }}
@@ -42,6 +45,10 @@ export function Branches() {
                   <Phone className="h-4 w-4 shrink-0 text-ink-soft" strokeWidth={1.75} aria-hidden />
                   {branch.phoneDisplay}
                 </a>
+                <p className="mt-3 border-t border-ink/8 pt-3 text-xs text-ink-soft">
+                  <span className="label text-ink-soft/70">Also serving </span>
+                  {branch.towns}
+                </p>
               </motion.div>
             </Reveal>
           ))}
