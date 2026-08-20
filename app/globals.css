@@ -71,7 +71,7 @@ body {
 .bg-route-lines {
   background-image: repeating-linear-gradient(
     120deg,
-    rgba(26, 26, 26, 0.045) 0 2px,
+    rgba(200, 16, 46, 0.09) 0 2px,
     transparent 2px 26px
   );
 }
@@ -120,7 +120,24 @@ body {
   animation: cta-pulse 2.4s ease-in-out infinite;
 }
 
-/* Branch map — restyle Leaflet's default chrome to match the brand. */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 32s linear infinite;
+}
+
+/* Branch map — isolate so Leaflet's internal z-index (up to 1000 for
+   controls/popups) can't escape above the sticky nav (z-40) on scroll. */
+.branch-map {
+  isolation: isolate;
+}
 .branch-map .leaflet-popup-content-wrapper {
   border-radius: 12px;
   box-shadow: 0 12px 28px rgba(26, 26, 26, 0.18);
@@ -163,6 +180,10 @@ body {
   }
 
   .animate-cta-pulse {
+    animation: none;
+  }
+
+  .animate-marquee {
     animation: none;
   }
 }

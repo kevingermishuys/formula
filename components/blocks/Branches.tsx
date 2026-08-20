@@ -5,6 +5,7 @@ import { MapPin, Phone } from "lucide-react";
 import { Reveal } from "@/components/motion/Reveal";
 import { Button } from "@/components/ui/Button";
 import { BranchMap } from "./BranchMap";
+import { ReviewsTicker } from "./ReviewsTicker";
 import { branches, site } from "@/content/site";
 
 export function Branches() {
@@ -31,7 +32,7 @@ export function Branches() {
               <motion.div
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.25, ease: "easeOut" }}
-                className="h-full rounded-2xl border border-ink/8 bg-canvas p-6 transition-shadow hover:shadow-lg"
+                className="h-full rounded-2xl border border-ink/20 bg-canvas p-6 transition-shadow hover:shadow-lg"
               >
                 {branch.isHQ && (
                   <span className="label mb-3 inline-block rounded-full bg-gold/20 px-3 py-1 text-gold-deep">
@@ -50,7 +51,7 @@ export function Branches() {
                   <Phone className="h-4 w-4 shrink-0 text-ink-soft" strokeWidth={1.75} aria-hidden />
                   {branch.phoneDisplay}
                 </a>
-                <p className="mt-3 border-t border-ink/8 pt-3 text-xs text-ink-soft">
+                <p className="mt-3 border-t border-ink/20 pt-3 text-xs text-ink-soft">
                   <span className="label text-ink-soft/70">Also serving </span>
                   {branch.towns}
                 </p>
@@ -59,7 +60,11 @@ export function Branches() {
           ))}
         </div>
 
-        <Reveal delay={0.1} className="mt-10 flex justify-center">
+        <Reveal delay={0.1}>
+          <ReviewsTicker />
+        </Reveal>
+
+        <Reveal delay={0.15} className="mt-10 flex justify-center">
           <Button href="#quote" variant="primary">
             Request a Pickup
           </Button>

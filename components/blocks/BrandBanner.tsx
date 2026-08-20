@@ -7,8 +7,8 @@ export function BrandBanner() {
     <section className="relative overflow-hidden bg-ink">
       <ImageReveal className="relative h-[220px] w-full sm:h-[280px]">
         <Image
-          src="/images/box-handheld.jpg"
-          alt="A Formula Courier Services branded parcel"
+          src="/images/fleet-lineup.jpg"
+          alt="The Formula Courier Services fleet of branded vehicles lined up outside the depot"
           fill
           className="object-cover"
         />

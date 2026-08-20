@@ -254,6 +254,29 @@ export const stats = [
   { value: site.totalBranches, suffix: "", label: "Branches Nationwide" },
 ] as const;
 
+export const reviews = [
+  {
+    quote: "Service was on point and efficient early in the morning. Staff friendly, professional and helpful — will definitely look to use them for all of Mobility 4 Nam's mobility scooter deliveries around Namibia.",
+    author: "Selwyn Visagie, Google review",
+  },
+  {
+    quote: "Excellent service, very friendly staff. They deliver all over the country and are very efficient and fast with their deliveries.",
+    author: "Manuel Laudien, Google review",
+  },
+  {
+    quote: "Great service. I was very satisfied with the service and processing.",
+    author: "Frank N., Google review",
+  },
+  {
+    quote: "Good service & very reliable with the best prices. Your parcel will be delivered directly to its destination, on time, accurately.",
+    author: "Harris Mutakela, Google review",
+  },
+  {
+    quote: "Quick service, friendly staff.",
+    author: "Slipknot Enthusiast, Google review",
+  },
+] as const;
+
 export const navLinks = [
   { label: "Services", href: "#services" },
   { label: "Get a Quote", href: "#quote" },

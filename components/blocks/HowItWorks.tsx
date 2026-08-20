@@ -19,7 +19,7 @@ export function HowItWorks() {
             {howItWorks.map((step, i) => (
               <Reveal key={step.step} delay={i * 0.08}>
                 <li className="flex gap-5">
-                  <span className="font-display text-3xl font-extrabold text-ink/15">
+                  <span className="font-display text-3xl font-extrabold text-ink/35">
                     {step.step}
                   </span>
                   <div>
